@@ -1,5 +1,22 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+    "validCountry": "Malta",
+    "invalidCountry": "Gzira",
+    "invalidInputs": [
+        {
+            "country": "aa",
+            "expectedError": "The Search field must be at least 3 characters in length."
+        },
+        {
+            "country": "1=1",
+            "expectedError": "The Search field may only contain alpha-numeric characters, underscores, spaces and dashes."
+        },
+        {
+            "country": "invalid!valid",
+            "expectedError": "The Search field may only contain alpha-numeric characters, underscores, spaces and dashes."
+        },
+        {
+            "country": "?characters_",
+            "expectedError": "The Search field may only contain alpha-numeric characters, underscores, spaces and dashes."
+        }        
+    ]
 }

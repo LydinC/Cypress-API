@@ -13,11 +13,12 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 
 import { getCountries } from "./endpointCallers";
+import { getStatistics } from "./endpointCallers";
 import { validateSchema } from "./schema_validator";
 
 Cypress.Commands.add("getCountries", getCountries);
+Cypress.Commands.add("getStatistics", getStatistics);
 Cypress.Commands.add("validateSchema", validateSchema);
-
 
 //
 //
