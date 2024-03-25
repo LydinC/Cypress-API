@@ -63,7 +63,7 @@ describe('Countries Endpoint Tests', () => {
     });
   });
 
-  it('GET - Countries Endpoint - Verify Unauthorised Access', () => {
+  it('GET - Countries Endpoint - Verify Forbidden Access', () => {
     cy.request({
       method: 'GET',
       url: '/countries',
