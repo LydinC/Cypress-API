@@ -31,7 +31,7 @@ describe('Countries Endpoint Tests', () => {
     });
   });
 
-  it('GET - Countries - Search Invalid Country Name', () => {
+  it('GET - Countries - Search Non-Existing Country Name', () => {
     cy.getCountries(countriesData.invalidCountry).then((response) =>
     {
       expect(response.body).to.have.property('results', 0); 
